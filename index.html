@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>✨ 17 Months ✨</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Hind:wght@300;400&family=Tiro+Devanagari+Hindi&display=swap" rel="stylesheet">
+<style>
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Hind', sans-serif;
+    min-height: 100vh;
+    color: #FFD700;
+    overflow-x: hidden;
+    position: relative;
+}
+.star-bg {
+    position: fixed;
+    top: 0; left: 0; width: 100vw; height: 100vh;
+    background: radial-gradient(ellipse at top left, #3a1c71 0%, #1a0033 100%);
+    z-index: 0;
+    pointer-events: none;
+}
+.particles {
+    position: fixed;
+    top: 0; left: 0; width: 100vw; height: 100vh;
+    z-index: 1;
+    pointer-events: none;
+}
+.particle {
+    position: absolute;
+    animation: floatDown linear forwards;
+}
+@keyframes floatDown {
+    to { top: 110vh; opacity: 0.2; }
+}
+.container {
+    position: relative;
+    z-index: 2;
+    max-width: 600px;
+    margin: 80px auto 0 auto;
+    background: rgba(30,0,60,0.7);
+    border-radius: 30px;
+    box-shadow: 0 8px 32px 0 rgba(255, 215, 0, 0.1);
+    border: 1px solid rgba(255, 215, 0, 0.3);
+    padding: 40px 30px 30px 30px;
+    text-align: center;
+}
+.kanha-image img {
+    width: 180px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 8px #FFD700, 0 4px 24px 0 rgba(255, 215, 0, 0.2);
+    margin-bottom: 20px;
+}
+.main-heading {
+    font-family: 'Great Vibes', cursive;
+    font-size: 3rem;
+    color: #FFD700;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+.glow-text {
+    text-shadow: 0 0 18px #FFD700, 0 0 40px #ffac33;
+}
+.wish {
+    font-family: 'Hind', sans-serif;
+    font-size: 1.2rem;
+    color: #fffbe6;
+    margin-bottom: 25px;
+}
+.continue-button {
+    background: linear-gradient(145deg, #FFD700, #ffac33);
+    color: #4a2c00;
+    font-size: 1.1rem;
+    padding: 12px 38px;
+    border: none;
+    border-radius: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: all 0.3s;
+    box-shadow: 0 2px 8px 0 rgba(255, 215, 0, 0.15);
+    text-shadow: 0 0 8px #FFD700;
+}
+.continue-button:hover {
+    background: linear-gradient(145deg, #fff08b, #ffc56e);
+    transform: scale(1.05);
+}
+#text-modal {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    background: rgba(12,0,26,0.95);
+    z-index: 9999;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#modal-content {
+    background: rgba(255,255,255,0.08);
+    border-radius: 20px;
+    padding: 30px 40px;
+    box-shadow: 0 8px 32px 0 rgba(255, 215, 0, 0.1);
+    border: 1px solid rgba(255, 215, 0, 0.3);
+    text-align: center;
+    max-width: 700px;
+    width: 90vw;
+}
+#modal-content h2 {
+    font-family: 'Great Vibes', cursive;
+    color: #FFD700;
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+#modal-content p {
+    font-size: 1.35rem;
+    color: #FFD700;
+    margin-bottom: 20px;
+    line-height: 1.08;
+    word-break: break-word;
+    white-space: pre-line;
+}
+#modal-content textarea {
+    width: 100%;
+    min-height: 120px;
+    font-size: 1.1rem;
+    font-family: 'Hind', sans-serif;
+    border-radius: 10px;
+    border: 1px solid #FFD700;
+    padding: 10px;
+    margin-bottom: 20px;
+    background: rgba(255,255,255,0.15);
+    color: #FFD700;
+    resize: vertical;
+}
+#close-modal {
+    background: linear-gradient(145deg, #FFD700, #ffac33);
+    color: #4a2c00;
+    font-size: 1.1rem;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: all 0.3s;
+}
+#close-modal:hover {
+    background: linear-gradient(145deg, #fff08b, #ffc56e);
+    transform: scale(1.05);
+}
+</style>
+</head>
+<body>
+<div class="star-bg"></div>
+<div class="particles"></div>
+
+<main class="container">
+    <div class="kanha-image">
+        <img src="photo1.jpg">
+    </div>
+    <h1 class="main-heading glow-text">Happy 17 Months to us 🌸</h1>
+    <p class="wish">I hope our bond keep growing stronger with every passing day and we continue creating countless beautiful memories together.</p>
+    <button class="continue-button" id="openTextModalBtn">Click Here</button>
+</main>
+
+<div id="display-paragraph" style="display:none; 
+    margin: 30px auto 0 auto; 
+    max-width:600px; 
+    background:rgba(255,255,255,0.08); 
+    border-radius:20px; 
+    padding:20px; 
+    color:#FFD700; 
+    font-size:1.2rem; 
+    text-align:center;">
+</div>
+
+<!-- Modal for showing paragraph -->
+<div id="text-modal">
+    <div id="modal-content">
+        <h2>Happy 17 Months of our beautiful relationship</h2>
+        <p style="font-size:1.2rem; color:#FFD700; margin-bottom:20px;">
+            ik baba kuch dino se hamare beech kuch utna thik nahi hai but hum to hum haina..<br>
+            Hamare realtionship ko bhi aj 17 months pure hogye so apko iski bohot bohot badhai..
+            Aur apko to pata haina ki apko mai kitna pasand krta hu..
+            To please mujhe maf kardo ap meri taraf se jo bhi hua uske liye..<br>
+            Aur asa nahi hai ki mujhe yad nhi tha ye.. ofc mujhe ye yad tha aur kal mai sogya idk kaise 11:57 pe..
+            Mai wish bhi nhi kar paya.. but fir maine socha ki apko ek hi bar me ye surprise dedunga but isme bhi late hogya..<br>
+            Ik ap ye soch rhi hogi pure din ki bhool gya but asa nhi hai.. tho please ap mujhe ab meri batoin ke liye maf kardo na darling..
+            I want to be your loobie dobiee kish..
+            Please babe.. I love you so much..<br>
+            Happy 17 Months of us again 🌸..<br>
+        </p>
+        <button id="close-modal">Close</button>
+    </div>
+</div>
+
+<script>
+// Floating particles
+const emojis = ['🌸','🌺','🌼','🪶','🪈'];
+function createParticle() {
+    const p = document.createElement('span');
+    p.className = 'particle';
+    p.innerText = emojis[Math.floor(Math.random()*emojis.length)];
+    p.style.left = Math.random()*100 + 'vw';
+    p.style.top = '-40px';
+    p.style.fontSize = (Math.random()*1.5+1) + 'rem';
+    p.style.animationDuration = (Math.random()*8+8) + 's';
+    document.querySelector('.particles').appendChild(p);
+    setTimeout(()=>p.remove(),15000);
+}
+setInterval(createParticle, 400);
+for(let i=0;i<20;i++) createParticle();
+
+// Modal logic
+document.getElementById('openTextModalBtn').onclick = () => {
+    document.getElementById('text-modal').style.display = 'flex';
+};
+document.getElementById('close-modal').onclick = () => {
+    document.getElementById('text-modal').style.display = 'none';
+};
+document.addEventListener('keydown', (e) => {
+    if (e.key === "Escape") document.getElementById('text-modal').style.display = 'none';
+});
+</script>
+
+</body>
+</html>
